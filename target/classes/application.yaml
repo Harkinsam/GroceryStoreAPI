@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/girrafe
+    username: root
+    password: samxino1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: 4bb6d1dfbafb64a681139d1586b6f1160d18159afd57c8c79136d7490630407c
+      token: 180000
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.example: INFO
+
+aws:
+  s3:
+    access-key-id: AKIA5WDCPJZIP4FLXAG7
+    secret-access-key: pa1Vsx0SgQ30kdJYUXEZ6OG7APCYT5+1N0d4Y0Ik
+    region: us-east-1

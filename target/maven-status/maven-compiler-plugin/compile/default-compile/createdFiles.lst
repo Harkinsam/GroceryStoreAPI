@@ -1,0 +1,3 @@
+com\example\rest_demo\controller\CloudVendorAPIService.class
+com\example\rest_demo\model\CloudVendor.class
+com\example\rest_demo\RestDemoApplication.class
