@@ -30,3 +30,10 @@ aws:
     access-key-id: AKIA5WDCPJZIP4FLXAG7
     secret-access-key: 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
     region: us-east-1
+
+korapay:
+  secret:
+    key: sk_test_yeE6xWY3a3KqoBWsF9X3QzxwTLiP8XqKU8ZZ2pnq
+
+paystack:
+  secret-key: sk_test_5d7037c676b32bd55235a5276989e00d5dad8ea3

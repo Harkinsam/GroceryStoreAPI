@@ -63,7 +63,7 @@ public class UserAuthenticationService {
 
         // Log the new user details before saving
         logger.info("New user details before saving: {}", newUser.getName());
-        logger.info("New user details before saving: {}", newUser);
+//        logger.info("New user details before saving: {}", newUser);
 
         // Save the new user entity
         try {

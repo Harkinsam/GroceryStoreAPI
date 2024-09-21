@@ -27,6 +27,13 @@ logging:
 
 aws:
   s3:
-    access-key-id: YOUR_AWS_ACCESS_KEY_ID
-    secret-access-key: YOUR_AWS_SECRET_ACCESS_KEY_ID
-    region: YOUR_AWS_REGION
+    access-key-id: ${AWS_ACCESS_KEY_ID}
+    secret-access-key: ${AWS_SECRET_ACCESS_KEY}
+    region: us-east-1
+
+korapay:
+  secret:
+    key: ${KORAPAY_SECRET_KEY}
+
+paystack:
+  secret-key: ${PAYSTACK_SECRET_KEY}

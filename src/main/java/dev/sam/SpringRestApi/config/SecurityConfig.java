@@ -41,6 +41,8 @@ public class SecurityConfig {
                                 .permitAll()
                                 .requestMatchers("/api/products/**")
                                 .permitAll()
+                                .requestMatchers("/api/payments/**")
+                                .permitAll()
                                 .requestMatchers("/api/category/**")
                                 .permitAll()
                                 .requestMatchers("/api/vendor/**")
