@@ -37,16 +37,17 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
-                        req->req.requestMatchers("/api/auth/**")
-                                .permitAll()
-                                .requestMatchers("/api/products/**")
-                                .permitAll()
-                                .requestMatchers("/api/payments/**")
-                                .permitAll()
-                                .requestMatchers("/api/category/**")
-                                .permitAll()
-                                .requestMatchers("/api/vendor/**")
-                                .permitAll()
+                        req->req.requestMatchers(
+                                        "/api/auth/**",
+                                        "/api/products/**",
+                                        "/api/payments/**",
+                                        "/api/category/**",
+                                        "/api/vendor/**",
+                                        "/swagger-ui/**",
+                                        "/v3/api-docs/**",            // Allow access to OpenAPI JSON
+                                        "/swagger-resources/**",      // Allow access to Swagger resources
+                                        "/webjars/**"                 // Allow access to WebJars for Swagger UI
+                                ).permitAll()
                                 .requestMatchers("/admin_only/**").hasAuthority("ADMIN")
                                 .anyRequest()
                                 .authenticated()
@@ -62,6 +63,9 @@ public class SecurityConfig {
                 .build();
 
     }
+
+
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
